@@ -17,7 +17,6 @@ C:\Users\Angel Diesel\Desktop\Staj\Staj Alıştırma\EğitimAmaçlı\SqlBaglanti
 C:\Users\Angel Diesel\Desktop\Staj\Staj Alıştırma\EğitimAmaçlı\SqlBaglantiEgitimUygulamalari\SchoolManagementProject_SecondVersion\SqlBaglantiUyg\bin\Debug\SqlBaglantiUyg.exe.config
 C:\Users\Angel Diesel\Desktop\Staj\Staj Alıştırma\EğitimAmaçlı\SqlBaglantiEgitimUygulamalari\SchoolManagementProject_SecondVersion\SqlBaglantiUyg\bin\Debug\SqlBaglantiUyg.exe
 C:\Users\Angel Diesel\Desktop\Staj\Staj Alıştırma\EğitimAmaçlı\SqlBaglantiEgitimUygulamalari\SchoolManagementProject_SecondVersion\SqlBaglantiUyg\bin\Debug\SqlBaglantiUyg.pdb
-C:\Users\Angel Diesel\Desktop\Staj\Staj Alıştırma\EğitimAmaçlı\SqlBaglantiEgitimUygulamalari\SchoolManagementProject_SecondVersion\SqlBaglantiUyg\obj\Debug\SqlBaglantiUyg.csprojAssemblyReference.cache
 C:\Users\Angel Diesel\Desktop\Staj\Staj Alıştırma\EğitimAmaçlı\SqlBaglantiEgitimUygulamalari\SchoolManagementProject_SecondVersion\SqlBaglantiUyg\obj\Debug\SqlBaglantiUyg.FrmAnaMenu.resources
 C:\Users\Angel Diesel\Desktop\Staj\Staj Alıştırma\EğitimAmaçlı\SqlBaglantiEgitimUygulamalari\SchoolManagementProject_SecondVersion\SqlBaglantiUyg\obj\Debug\SqlBaglantiUyg.FrmBarcodeGenerator.resources
 C:\Users\Angel Diesel\Desktop\Staj\Staj Alıştırma\EğitimAmaçlı\SqlBaglantiEgitimUygulamalari\SchoolManagementProject_SecondVersion\SqlBaglantiUyg\obj\Debug\SqlBaglantiUyg.FrmKullanicilar.resources
@@ -30,3 +29,4 @@ C:\Users\Angel Diesel\Desktop\Staj\Staj Alıştırma\EğitimAmaçlı\SqlBaglanti
 C:\Users\Angel Diesel\Desktop\Staj\Staj Alıştırma\EğitimAmaçlı\SqlBaglantiEgitimUygulamalari\SchoolManagementProject_SecondVersion\SqlBaglantiUyg\obj\Debug\SqlBaglantiUyg.csproj.CoreCompileInputs.cache
 C:\Users\Angel Diesel\Desktop\Staj\Staj Alıştırma\EğitimAmaçlı\SqlBaglantiEgitimUygulamalari\SchoolManagementProject_SecondVersion\SqlBaglantiUyg\obj\Debug\SqlBaglantiUyg.exe
 C:\Users\Angel Diesel\Desktop\Staj\Staj Alıştırma\EğitimAmaçlı\SqlBaglantiEgitimUygulamalari\SchoolManagementProject_SecondVersion\SqlBaglantiUyg\obj\Debug\SqlBaglantiUyg.pdb
+C:\Users\Angel Diesel\Desktop\Staj\Staj Alıştırma\EğitimAmaçlı\SqlBaglantiEgitimUygulamalari\SchoolManagementProject_SecondVersion\SqlBaglantiUyg\obj\Debug\SqlBaglantiUyg.csprojAssemblyReference.cache

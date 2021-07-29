@@ -29,7 +29,7 @@ namespace SqlBaglantiUyg
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
             this.label2 = new System.Windows.Forms.Label();
             this.SifreText = new System.Windows.Forms.TextBox();
             this.GiriButon = new System.Windows.Forms.Button();
@@ -37,29 +37,30 @@ namespace SqlBaglantiUyg
             this.kullaniciKomboBox = new System.Windows.Forms.ComboBox();
             this.SifreDegLink = new System.Windows.Forms.LinkLabel();
             this.hatirlaCheckBox = new System.Windows.Forms.CheckBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(54, 43);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(158, 29);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Kullanıcı Adı";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(54, 95);
+            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.Window;
+            this.label2.Location = new System.Drawing.Point(188, 183);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 29);
+            this.label2.Size = new System.Drawing.Size(60, 28);
             this.label2.TabIndex = 1;
             this.label2.Text = "Şifre";
             // 
             // SifreText
             // 
-            this.SifreText.Location = new System.Drawing.Point(238, 95);
+            this.SifreText.Location = new System.Drawing.Point(365, 182);
             this.SifreText.Name = "SifreText";
             this.SifreText.PasswordChar = '*';
             this.SifreText.Size = new System.Drawing.Size(229, 34);
@@ -67,30 +68,41 @@ namespace SqlBaglantiUyg
             // 
             // GiriButon
             // 
-            this.GiriButon.Location = new System.Drawing.Point(59, 205);
+            this.GiriButon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(60)))), ((int)(((byte)(113)))));
+            this.GiriButon.FlatAppearance.BorderSize = 0;
+            this.GiriButon.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.GiriButon.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GiriButon.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.GiriButon.Location = new System.Drawing.Point(186, 292);
             this.GiriButon.Name = "GiriButon";
-            this.GiriButon.Size = new System.Drawing.Size(192, 54);
-            this.GiriButon.TabIndex = 4;
+            this.GiriButon.Size = new System.Drawing.Size(198, 54);
+            this.GiriButon.TabIndex = 0;
+            this.GiriButon.TabStop = false;
             this.GiriButon.Text = "GİRİŞ YAP";
-            this.GiriButon.UseVisualStyleBackColor = true;
+            this.GiriButon.UseVisualStyleBackColor = false;
             this.GiriButon.Click += new System.EventHandler(this.GiriButon_Click);
             // 
             // CikisButon
             // 
+            this.CikisButon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(60)))), ((int)(((byte)(113)))));
             this.CikisButon.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.CikisButon.Location = new System.Drawing.Point(275, 205);
+            this.CikisButon.FlatAppearance.BorderSize = 0;
+            this.CikisButon.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.CikisButon.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CikisButon.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.CikisButon.Location = new System.Drawing.Point(402, 292);
             this.CikisButon.Name = "CikisButon";
             this.CikisButon.Size = new System.Drawing.Size(192, 54);
             this.CikisButon.TabIndex = 5;
             this.CikisButon.Text = "ÇIKIŞ";
-            this.CikisButon.UseVisualStyleBackColor = true;
+            this.CikisButon.UseVisualStyleBackColor = false;
             this.CikisButon.Click += new System.EventHandler(this.CikisButon_Click);
             // 
             // kullaniciKomboBox
             // 
             this.kullaniciKomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.kullaniciKomboBox.FormattingEnabled = true;
-            this.kullaniciKomboBox.Location = new System.Drawing.Point(238, 40);
+            this.kullaniciKomboBox.Location = new System.Drawing.Point(365, 127);
             this.kullaniciKomboBox.Name = "kullaniciKomboBox";
             this.kullaniciKomboBox.Size = new System.Drawing.Size(229, 37);
             this.kullaniciKomboBox.TabIndex = 20;
@@ -99,9 +111,10 @@ namespace SqlBaglantiUyg
             // SifreDegLink
             // 
             this.SifreDegLink.AutoSize = true;
-            this.SifreDegLink.Location = new System.Drawing.Point(273, 152);
+            this.SifreDegLink.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SifreDegLink.Location = new System.Drawing.Point(400, 239);
             this.SifreDegLink.Name = "SifreDegLink";
-            this.SifreDegLink.Size = new System.Drawing.Size(194, 29);
+            this.SifreDegLink.Size = new System.Drawing.Size(182, 28);
             this.SifreDegLink.TabIndex = 7;
             this.SifreDegLink.TabStop = true;
             this.SifreDegLink.Text = "Şifremi Değiştir";
@@ -110,43 +123,113 @@ namespace SqlBaglantiUyg
             // hatirlaCheckBox
             // 
             this.hatirlaCheckBox.AutoSize = true;
-            this.hatirlaCheckBox.Location = new System.Drawing.Point(59, 151);
+            this.hatirlaCheckBox.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hatirlaCheckBox.Location = new System.Drawing.Point(186, 238);
             this.hatirlaCheckBox.Name = "hatirlaCheckBox";
-            this.hatirlaCheckBox.Size = new System.Drawing.Size(171, 33);
+            this.hatirlaCheckBox.Size = new System.Drawing.Size(165, 32);
             this.hatirlaCheckBox.TabIndex = 8;
             this.hatirlaCheckBox.Text = "Beni Hatırla";
             this.hatirlaCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.LightCoral;
+            this.button1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.ForeColor = System.Drawing.SystemColors.Control;
+            this.button1.Location = new System.Drawing.Point(605, 9);
+            this.button1.Margin = new System.Windows.Forms.Padding(0);
+            this.button1.Name = "button1";
+            this.button1.Padding = new System.Windows.Forms.Padding(2, 0, 0, 0);
+            this.button1.Size = new System.Drawing.Size(52, 44);
+            this.button1.TabIndex = 21;
+            this.button1.Text = "X";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Window;
+            this.label1.Location = new System.Drawing.Point(188, 131);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(157, 28);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Kullanıcı Adı";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(-48, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(491, 512);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 22;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label3.ForeColor = System.Drawing.SystemColors.Window;
+            this.label3.Location = new System.Drawing.Point(20, 22);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(407, 39);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Öğrenci Yönetim Sistemi";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(-2, -2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(445, 75);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox2.TabIndex = 23;
+            this.pictureBox2.TabStop = false;
             // 
             // FrmLogin
             // 
             this.AcceptButton = this.GiriButon;
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(120)))), ((int)(((byte)(158)))));
             this.CancelButton = this.CikisButon;
-            this.ClientSize = new System.Drawing.Size(528, 285);
-            this.Controls.Add(this.hatirlaCheckBox);
-            this.Controls.Add(this.SifreDegLink);
+            this.ClientSize = new System.Drawing.Size(666, 403);
             this.Controls.Add(this.CikisButon);
             this.Controls.Add(this.GiriButon);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.hatirlaCheckBox);
+            this.Controls.Add(this.SifreDegLink);
             this.Controls.Add(this.SifreText);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.kullaniciKomboBox);
+            this.Controls.Add(this.pictureBox1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.Name = "FrmLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmLogin";
             this.Load += new System.EventHandler(this.FrmLogin_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox SifreText;
         private System.Windows.Forms.Button GiriButon;
@@ -154,5 +237,10 @@ namespace SqlBaglantiUyg
         private System.Windows.Forms.LinkLabel SifreDegLink;
         private System.Windows.Forms.CheckBox hatirlaCheckBox;
         private System.Windows.Forms.ComboBox kullaniciKomboBox;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

@@ -3,21 +3,23 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
+
 namespace SqlBaglantiUyg
 {
     public partial class FrmLogin : Form
-    {
+    { 
         public FrmLogin()
         {
             InitializeComponent();
-        }        
-        
+            label1.BackColor = System.Drawing.Color.Transparent;
+        }               
 
         Islemler islemler = new Islemler();
         private void GiriButon_Click(object sender, EventArgs e)
@@ -123,7 +125,19 @@ namespace SqlBaglantiUyg
         }
  
         private void FrmLogin_Load(object sender, EventArgs e)
-        {            
+        {
+            label3.Parent = pictureBox2;
+            label3.BackColor = Color.Transparent;
+            Utils.OvalKenar_PictureBox(pictureBox2, 80);
+            Utils.OvalKenar_PictureBox(GiriButon, 50);
+            Utils.OvalKenar_PictureBox(CikisButon, 50);
+
+            Button buttonnn = new Button();
+            buttonnn.BringToFront();
+            this.Controls.Add(buttonnn);
+
+
+
             DataTable dtAktifler = islemler.Kullanicilar();
             kullaniciKomboBox.DataSource = dtAktifler;
 
@@ -203,5 +217,27 @@ namespace SqlBaglantiUyg
                 kullaniciKomboBox.SelectedIndex = -1;
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }       
+        
     }
+
+    public class ShapedButton : Button //Buton sınıfından miras alınıyor
+    { 
+
+        protected override void OnResize(EventArgs e)
+        {
+            base.OnResize(e); 
+            GraphicsPath gp = new GraphicsPath();
+            gp.AddEllipse(new Rectangle(Point.Empty, this.Size));
+            this.Region = new Region(gp);
+             
+        }
+
+    }
+
 }
+

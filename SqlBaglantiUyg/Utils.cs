@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
 using System.IO;
+using System.Drawing;
+using System.Drawing.Drawing2D;
+using System.Windows.Forms;
 
 namespace SqlBaglantiUyg
 {
@@ -177,6 +180,34 @@ namespace SqlBaglantiUyg
 
 
         #endregion baglanti
+
+
+        public static void OvalKenar_PictureBox(PictureBox pb , int radius) 
+        {
+            Rectangle r = new Rectangle(0, 0, pb.Width, pb.Height);
+            GraphicsPath gp = new GraphicsPath();
+            gp.AddArc(r.X, r.Y, radius/4, radius/4, 180, 90);
+            gp.AddArc(r.X + r.Width - radius, r.Y, radius*2, radius*2, 270, 90);
+            gp.AddArc(r.X + r.Width - radius, r.Y + r.Height - radius, radius, radius, 0, 90);
+            gp.AddArc(r.X, r.Y + r.Height - radius, radius*2, radius*2, 90, 90);
+            pb.Region = new Region(gp);
+        }
+
+        public static void OvalKenar_PictureBox(Button bt, int radius)
+        {
+            Rectangle r = new Rectangle(0, 0, bt.Width, bt.Height);
+            GraphicsPath gp = new GraphicsPath();
+            gp.AddArc(r.X, r.Y, radius, radius, 180, 90);
+            gp.AddArc(r.X + r.Width - radius, r.Y, radius, radius, 270, 90);
+            gp.AddArc(r.X + r.Width - radius, r.Y + r.Height - radius, radius, radius, 0, 90);
+            gp.AddArc(r.X, r.Y + r.Height - radius, radius, radius, 90, 90);
+            bt.FlatStyle = FlatStyle.Flat;
+            bt.FlatAppearance.BorderSize = 0;
+            bt.Region = new Region(gp);
+        }
+
+
+
 
 
 
