@@ -19,12 +19,13 @@ namespace SqlBaglantiUyg
         {
             InitializeComponent();
             label1.BackColor = System.Drawing.Color.Transparent;
-        }               
+        }
 
+        Bitmap shadowBmp = null;
         Islemler islemler = new Islemler();
         private void GiriButon_Click(object sender, EventArgs e)
         {
-           
+
 
             // kullanıcı adı kısmı boş ise
             if (kullaniciKomboBox.SelectedIndex < 0)
@@ -126,14 +127,8 @@ namespace SqlBaglantiUyg
  
         private void FrmLogin_Load(object sender, EventArgs e)
         {
-            label3.Parent = pictureBox2;
-            label3.BackColor = Color.Transparent;
-            pictureBox1.Parent = pictureBox3;
-            pictureBox1.BackColor = Color.Transparent;
-            pictureBox1.Location = new Point(460, 200);
-            Utils.OvalKenar_PictureBox(pictureBox2, 80);
-            Utils.OvalKenar_PictureBox(GiriButon, 50);
-            Utils.OvalKenar_PictureBox(CikisButon, 50);
+
+            Design_Load();
 
             DataTable dtAktifler = islemler.Kullanicilar();
             kullaniciKomboBox.DataSource = dtAktifler;
@@ -219,21 +214,38 @@ namespace SqlBaglantiUyg
         {
             Application.Exit();
         }       
-        
-    }
 
-    public class ShapedButton : Button //Buton sınıfından miras alınıyor
-    { 
 
-        protected override void OnResize(EventArgs e)
+
+        private void DropShadow(Button buton)
         {
-            base.OnResize(e); 
-            GraphicsPath gp = new GraphicsPath();
-            gp.AddEllipse(new Rectangle(Point.Empty, this.Size));
-            this.Region = new Region(gp);
-             
+            if (shadowBmp == null || shadowBmp.Size != buton.Size)
+            {
+                shadowBmp?.Dispose();
+                shadowBmp = new Bitmap(buton.Width, buton.Height, System.Drawing.Imaging.PixelFormat.Format32bppArgb);
+            }
+
+            using (GraphicsPath gp = new GraphicsPath())
+            {
+                gp.AddRectangle(new Rectangle(buton.Location.X, buton.Location.Y, buton.Size.Width, buton.Size.Height));
+                Utils.DrawShadowSmooth(gp, 100, 60, shadowBmp);
+            }
         }
 
+        private void Design_Load()
+        {
+            label3.Parent = pictureBox2;
+            label3.BackColor = Color.Transparent;
+            pictureBox1.Parent = pictureBox3;
+            pictureBox1.BackColor = Color.Transparent;
+            pictureBox1.Location = new Point(460, 200);
+            Utils.OvalKenar_PictureBox(pictureBox2, 80);
+            Utils.OvalKenar_PictureBox(GiriButon, 50);
+            Utils.OvalKenar_PictureBox(CikisButon, 50);
+            DropShadow(GiriButon);
+        }
+
+        
     }
 
 }

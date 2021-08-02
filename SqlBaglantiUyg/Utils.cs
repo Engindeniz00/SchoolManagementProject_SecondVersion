@@ -182,6 +182,9 @@ namespace SqlBaglantiUyg
         #endregion baglanti
 
 
+
+        #region grafik
+
         public static void OvalKenar_PictureBox(PictureBox pb , int radius) 
         {
             Rectangle r = new Rectangle(0, 0, pb.Width, pb.Height);
@@ -207,7 +210,33 @@ namespace SqlBaglantiUyg
         }
 
 
+        
 
+        public static void DrawShadowSmooth(GraphicsPath gp, int intensity, int radius, Bitmap dest)
+        {
+            using (Graphics g = Graphics.FromImage(dest))
+            {
+                g.Clear(Color.Transparent);
+                g.CompositingMode = CompositingMode.SourceCopy;
+                double alpha = 0;
+                double astep = 0;
+                double astepstep = (double)intensity / radius / (radius / 2D);
+                for (int thickness = radius; thickness > 0; thickness--)
+                {
+                    using (Pen p = new Pen(Color.FromArgb((int)alpha, 0, 0, 0), thickness))
+                    {
+                        p.LineJoin = LineJoin.Round;
+                        g.DrawPath(p,gp);
+                    }
+                    alpha += astep;
+                    astep += astepstep;
+                }
+            }
+        }
+
+
+
+        #endregion grafik
 
 
 

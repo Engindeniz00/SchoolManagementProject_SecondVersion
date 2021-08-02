@@ -29,6 +29,7 @@ namespace SqlBaglantiUyg
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
             this.label2 = new System.Windows.Forms.Label();
             this.SifreText = new System.Windows.Forms.TextBox();
@@ -43,6 +44,7 @@ namespace SqlBaglantiUyg
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -71,7 +73,7 @@ namespace SqlBaglantiUyg
             // GiriButon
             // 
             this.GiriButon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(112)))), ((int)(((byte)(170)))));
-            this.GiriButon.FlatAppearance.BorderSize = 0;
+            this.GiriButon.FlatAppearance.BorderSize = 15;
             this.GiriButon.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.GiriButon.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GiriButon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
@@ -88,13 +90,13 @@ namespace SqlBaglantiUyg
             // 
             this.CikisButon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(112)))), ((int)(((byte)(170)))));
             this.CikisButon.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.CikisButon.FlatAppearance.BorderSize = 0;
+            this.CikisButon.FlatAppearance.BorderSize = 15;
             this.CikisButon.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.CikisButon.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CikisButon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.CikisButon.Location = new System.Drawing.Point(625, 315);
             this.CikisButon.Name = "CikisButon";
-            this.CikisButon.Size = new System.Drawing.Size(192, 54);
+            this.CikisButon.Size = new System.Drawing.Size(198, 54);
             this.CikisButon.TabIndex = 5;
             this.CikisButon.Text = "ÇIKIŞ";
             this.CikisButon.UseVisualStyleBackColor = false;
@@ -127,7 +129,7 @@ namespace SqlBaglantiUyg
             // 
             this.hatirlaCheckBox.AutoSize = true;
             this.hatirlaCheckBox.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hatirlaCheckBox.Location = new System.Drawing.Point(421, 239);
+            this.hatirlaCheckBox.Location = new System.Drawing.Point(416, 239);
             this.hatirlaCheckBox.Name = "hatirlaCheckBox";
             this.hatirlaCheckBox.Size = new System.Drawing.Size(165, 32);
             this.hatirlaCheckBox.TabIndex = 8;
@@ -206,6 +208,11 @@ namespace SqlBaglantiUyg
             this.pictureBox3.TabIndex = 24;
             this.pictureBox3.TabStop = false;
             // 
+            // notifyIcon1
+            // 
+            this.notifyIcon1.Text = "notifyIcon1";
+            this.notifyIcon1.Visible = true;
+            // 
             // FrmLogin
             // 
             this.AcceptButton = this.GiriButon;
@@ -213,10 +220,10 @@ namespace SqlBaglantiUyg
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(199)))), ((int)(((byte)(250)))));
             this.CancelButton = this.CikisButon;
-            this.ClientSize = new System.Drawing.Size(849, 425);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(849, 423);
             this.Controls.Add(this.CikisButon);
             this.Controls.Add(this.GiriButon);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.button1);
@@ -258,5 +265,6 @@ namespace SqlBaglantiUyg
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.NotifyIcon notifyIcon1;
     }
 }

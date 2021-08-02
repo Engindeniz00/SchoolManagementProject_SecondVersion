@@ -82,6 +82,7 @@ namespace SqlBaglantiUyg
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.PowderBlue;
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label1.Cursor = System.Windows.Forms.Cursors.Default;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -94,7 +95,7 @@ namespace SqlBaglantiUyg
             // AdKutu
             // 
             this.AdKutu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.AdKutu.Location = new System.Drawing.Point(234, 86);
+            this.AdKutu.Location = new System.Drawing.Point(248, 86);
             this.AdKutu.Name = "AdKutu";
             this.AdKutu.Size = new System.Drawing.Size(168, 24);
             this.AdKutu.TabIndex = 2;
@@ -102,7 +103,7 @@ namespace SqlBaglantiUyg
             // SoyadKutu
             // 
             this.SoyadKutu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.SoyadKutu.Location = new System.Drawing.Point(234, 127);
+            this.SoyadKutu.Location = new System.Drawing.Point(248, 127);
             this.SoyadKutu.Name = "SoyadKutu";
             this.SoyadKutu.Size = new System.Drawing.Size(168, 24);
             this.SoyadKutu.TabIndex = 4;
@@ -110,6 +111,7 @@ namespace SqlBaglantiUyg
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.PowderBlue;
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label2.Cursor = System.Windows.Forms.Cursors.Default;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -122,6 +124,7 @@ namespace SqlBaglantiUyg
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.PowderBlue;
             this.label3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label3.Cursor = System.Windows.Forms.Cursors.Default;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -134,7 +137,7 @@ namespace SqlBaglantiUyg
             // NumaraKutu
             // 
             this.NumaraKutu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.NumaraKutu.Location = new System.Drawing.Point(234, 169);
+            this.NumaraKutu.Location = new System.Drawing.Point(248, 169);
             this.NumaraKutu.Name = "NumaraKutu";
             this.NumaraKutu.Size = new System.Drawing.Size(168, 24);
             this.NumaraKutu.TabIndex = 6;
@@ -142,6 +145,7 @@ namespace SqlBaglantiUyg
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.PowderBlue;
             this.label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label4.Cursor = System.Windows.Forms.Cursors.Default;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -154,7 +158,7 @@ namespace SqlBaglantiUyg
             // dateTimePicker1
             // 
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(234, 210);
+            this.dateTimePicker1.Location = new System.Drawing.Point(248, 210);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(113, 22);
             this.dateTimePicker1.TabIndex = 8;
@@ -162,6 +166,7 @@ namespace SqlBaglantiUyg
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.PowderBlue;
             this.label5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label5.Cursor = System.Windows.Forms.Cursors.Default;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -174,6 +179,7 @@ namespace SqlBaglantiUyg
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.PowderBlue;
             this.label6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label6.Cursor = System.Windows.Forms.Cursors.Default;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -190,7 +196,7 @@ namespace SqlBaglantiUyg
             this.CinsiyetComboBox.Items.AddRange(new object[] {
             "E",
             "K"});
-            this.CinsiyetComboBox.Location = new System.Drawing.Point(234, 255);
+            this.CinsiyetComboBox.Location = new System.Drawing.Point(248, 255);
             this.CinsiyetComboBox.Name = "CinsiyetComboBox";
             this.CinsiyetComboBox.Size = new System.Drawing.Size(72, 24);
             this.CinsiyetComboBox.TabIndex = 11;
@@ -205,7 +211,7 @@ namespace SqlBaglantiUyg
             "C",
             "D",
             "E"});
-            this.SubeComboBox.Location = new System.Drawing.Point(234, 296);
+            this.SubeComboBox.Location = new System.Drawing.Point(248, 296);
             this.SubeComboBox.Name = "SubeComboBox";
             this.SubeComboBox.Size = new System.Drawing.Size(72, 24);
             this.SubeComboBox.TabIndex = 12;
@@ -318,7 +324,7 @@ namespace SqlBaglantiUyg
             // AraKutu
             // 
             this.AraKutu.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.AraKutu.Location = new System.Drawing.Point(521, 33);
+            this.AraKutu.Location = new System.Drawing.Point(533, 33);
             this.AraKutu.Name = "AraKutu";
             this.AraKutu.Size = new System.Drawing.Size(254, 34);
             this.AraKutu.TabIndex = 30;
@@ -327,6 +333,7 @@ namespace SqlBaglantiUyg
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.LightBlue;
             this.label7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label7.Location = new System.Drawing.Point(450, 35);
@@ -380,6 +387,7 @@ namespace SqlBaglantiUyg
             // label9
             // 
             this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.PowderBlue;
             this.label9.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label9.Cursor = System.Windows.Forms.Cursors.Default;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -392,7 +400,7 @@ namespace SqlBaglantiUyg
             // NotTextBox
             // 
             this.NotTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.NotTextBox.Location = new System.Drawing.Point(232, 335);
+            this.NotTextBox.Location = new System.Drawing.Point(246, 335);
             this.NotTextBox.Name = "NotTextBox";
             this.NotTextBox.Size = new System.Drawing.Size(50, 24);
             this.NotTextBox.TabIndex = 36;
@@ -412,6 +420,7 @@ namespace SqlBaglantiUyg
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(1384, 453);
             this.Controls.Add(this.NotTextBox);
             this.Controls.Add(this.label9);
