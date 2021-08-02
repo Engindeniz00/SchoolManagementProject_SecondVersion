@@ -68,11 +68,11 @@ namespace SqlBaglantiUyg
             }
             else
             {
-                sorgu = string.Format(@"SELECT Ogr.Adi+' '+Ogr.Soyadi as AdiSoyadi, Ogr.*, 
+                sorgu = @"SELECT Ogr.Adi+' '+Ogr.Soyadi as AdiSoyadi, Ogr.*, 
                    Kl.KullaniciAdi as KaydedenKullaniciAdi, Kl1.KullaniciAdi as DegistirenKullaniciAdi 
                    FROM Ogrenciler AS Ogr
                    INNER JOIN Kullanicilar as Kl on Kl.Id=Ogr.Kaydeden
-                   LEFT JOIN Kullanicilar as Kl1 on Kl1.Id=Ogr.Degistiren");
+                   LEFT JOIN Kullanicilar as Kl1 on Kl1.Id=Ogr.Degistiren";
 
                 //sqlDataAdapter.SelectCommand = new SqlCommand(@"SELECT Ogr.Adi+' '+Ogr.Soyadi as AdiSoyadi, Ogr.*, 
                 //    Kl.KullaniciAdi as KaydedenKullaniciAdi, Kl1.KullaniciAdi as DegistirenKullaniciAdi 
@@ -184,17 +184,25 @@ namespace SqlBaglantiUyg
                 if (KayitId > 0)
                 {
                     sorgu = string.Format(@"UPDATE Ogrenciler SET OgrenciNo='{0}', Adi='{1}', Soyadi='{2}',  
-                                            DogumTarihi='{3}', Cinsiyet='{4}', Sube='{5}',Notlar='{6}',Degistiren={7} WHERE Id = {8}",
-                                            NumaraKutu.Text, AdKutu.Text, SoyadKutu.Text, dateTimePicker1.Value.ToString("yyyy-MM-gg"), CinsiyetComboBox.Text, SubeComboBox.Text, NotTextBox.Text, Utils.KullaniciId, KayitId);
+                                            DogumTarihi='{3 : yyyy/MM/dd}', Cinsiyet='{4}', Sube='{5}',Notlar='{6}',Degistiren={7} WHERE Id = {8}",
+                                            NumaraKutu.Text, AdKutu.Text, SoyadKutu.Text, dateTimePicker1.Value, CinsiyetComboBox.Text, SubeComboBox.Text, NotTextBox.Text, Utils.KullaniciId, KayitId);
                 }
                 else
                 {
                    sorgu = string.Format(@"INSERT INTO Ogrenciler (OgrenciNo, Adi, Soyadi, DogumTarihi, Cinsiyet, Sube, Notlar,Kaydeden)
-                                            VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', {7})",NumaraKutu.Text,AdKutu.Text,SoyadKutu.Text,dateTimePicker1.Value.ToString("yyyy-MM-gg"),CinsiyetComboBox.Text, SubeComboBox.Text,NotTextBox.Text,Utils.KullaniciId);                  
+                                            VALUES ('{0}', '{1}', '{2}', '{3 : yyyy/MM/dd}', '{4}', '{5}', '{6}', {7})",NumaraKutu.Text,AdKutu.Text,SoyadKutu.Text, dateTimePicker1.Value, CinsiyetComboBox.Text, SubeComboBox.Text,NotTextBox.Text,Utils.KullaniciId);                  
 
                 }
 
-                Utils.SorguCalistir(sorgu);
+                if (Utils.SorguCalistir(sorgu))
+                {
+                    MessageBox.Show("İşlem başarılı.");
+                }
+                else
+                {
+                    MessageBox.Show("Hata oluştu");
+                }
+                
                 
 
                 // sql tablomuzde update,insert,delete vs... gibi değişiklikler yaptığımız zaman muhakkak bu yaptığımız değişiklikleri

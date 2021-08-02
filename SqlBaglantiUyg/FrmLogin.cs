@@ -128,15 +128,12 @@ namespace SqlBaglantiUyg
         {
             label3.Parent = pictureBox2;
             label3.BackColor = Color.Transparent;
+            pictureBox1.Parent = pictureBox3;
+            pictureBox1.BackColor = Color.Transparent;
+            pictureBox1.Location = new Point(460, 200);
             Utils.OvalKenar_PictureBox(pictureBox2, 80);
             Utils.OvalKenar_PictureBox(GiriButon, 50);
             Utils.OvalKenar_PictureBox(CikisButon, 50);
-
-            Button buttonnn = new Button();
-            buttonnn.BringToFront();
-            this.Controls.Add(buttonnn);
-
-
 
             DataTable dtAktifler = islemler.Kullanicilar();
             kullaniciKomboBox.DataSource = dtAktifler;

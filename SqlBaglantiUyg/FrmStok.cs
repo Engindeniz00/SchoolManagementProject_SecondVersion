@@ -69,11 +69,12 @@ namespace SqlBaglantiUyg
                 {
                     if (Utils.StokItemId > 0)
                     {
-                        sorgu = string.Format(@"UPDATE Stok SET StokKodu=@_stokKodu,StokAdi=@_stokAdi,Birim=@_birim,Barkod=@_barkod,StokMiktari=@_stokMiktari,AlisFiyati=@_alisFiyati,SatisFiyati=@_satisFiyati WHERE Id = {0}", Utils.StokItemId);
+                        sorgu = string.Format(@"UPDATE Stok SET StokKodu='{0}',StokAdi='{1}',Birim='{2}',Barkod='{3}',StokMiktari='{4}',AlisFiyati={5:0.##},SatisFiyati={6:0.##} WHERE Id = {7}", stokKodText.Text, stokAdiText.Text, birimKomBox.Text, barkodText.Text, stokMiktariText.Text, alisNumeric.Value.ToString().Replace(',','.'), satisNumeric.Value.ToString().Replace(',', '.'), Utils.StokItemId);
+                        // convert.tosingle ya da value.tostring.replace(',','.');
                     }
                     else
                     {
-                        sorgu = string.Format(@"INSERT INTO Stok (StokKodu,StokAdi,Birim,Barkod,StokMiktari,AlisFiyati,SatisFiyati) VALUES ('{0}','{1}','{2}','{3}','{4}',{5},{6})",stokKodText.Text,stokAdiText.Text,birimKomBox.Text,barkodText.Text,stokMiktariText.Text,(float)alisNumeric.Value,(float)satisNumeric.Value);
+                        sorgu = string.Format(@"INSERT INTO Stok (StokKodu,StokAdi,Birim,Barkod,StokMiktari,AlisFiyati,SatisFiyati) VALUES ('{0}','{1}','{2}','{3}','{4}',{5},{6})",stokKodText.Text,stokAdiText.Text,birimKomBox.Text,barkodText.Text,stokMiktariText.Text, alisNumeric.Value.ToString().Replace(',', '.'), satisNumeric.Value.ToString().Replace(',', '.'));
                     }
                 }
 
@@ -113,11 +114,12 @@ namespace SqlBaglantiUyg
 
         private void silButon_Click(object sender, EventArgs e)
         {
-            SqlCommand sqlCommand = null;
+            string sorgu = "";
             if (stokListe.CheckedItems.Count > 0)
             {
                 foreach(ListViewItem item in stokListe.CheckedItems)
                 {
+                    sorgu = string.Format("DELETE FROM Stok WHERE Id = {0}", Convert.ToInt32(item.SubItems[0].Text));
                     //sqlCommand = new SqlCommand("DELETE FROM Stok WHERE Id = @_id",Utils.baglantiOlustur);
                     //sqlCommand.Parameters.AddWithValue("@_id", Convert.ToInt32(item.SubItems[0].Text));
                 }
@@ -132,6 +134,7 @@ namespace SqlBaglantiUyg
             //sqlCommand.ExecuteNonQuery();
             //if (Utils.baglantiOlustur.State == ConnectionState.Open)
             //    Utils.baglantiOlustur.Close();
+            Utils.SorguCalistir(sorgu);
             VerileriGosterStok();
         }
 
