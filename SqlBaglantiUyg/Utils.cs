@@ -214,7 +214,7 @@ namespace SqlBaglantiUyg
 
         public static void DrawShadowSmooth(GraphicsPath gp, int intensity, int radius, Bitmap dest)
         {
-            using (Graphics g = Graphics.FromImage(dest))
+            using ( Graphics g = Graphics.FromImage(dest))
             {
                 g.Clear(Color.Transparent);
                 g.CompositingMode = CompositingMode.SourceCopy;
